@@ -1,0 +1,12 @@
+html {
+  background-color: white;
+}
+body {
+  margin: 0 auto;
+  padding: 0;
+  height: 480px;
+  width: 800px;
+  background-color: black;
+  color: white;
+  overflow: hidden;
+}

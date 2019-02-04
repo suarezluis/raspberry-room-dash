@@ -1,0 +1,20 @@
+.Weather {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 30% 40% 30%;
+  text-align: center;
+}
+
+.weatherIcon {
+  width: 100%;
+  border-radius: 40%;
+}
+
+.currentTemp {
+  font-size: 7em;
+  line-height: 0.75em;
+}
+.minMaxTemp {
+  font-size: 3.5em;
+  line-height: 0.9em;
+}

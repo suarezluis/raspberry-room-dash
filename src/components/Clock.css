@@ -1,0 +1,56 @@
+@font-face {
+  font-family: lcd;
+  src: url("../fonts/technology/Technology-Bold.ttf");
+}
+
+.Clock {
+  display: grid;
+  grid-template-columns: 20% 80%;
+}
+.fullDate {
+  color: gray;
+  text-align: center;
+}
+.day {
+  font-size: 3em;
+}
+.month {
+  font-size: 2em;
+}
+.date {
+  font-size: 3em;
+}
+
+.year {
+  font-size: 2em;
+}
+.fullTime {
+  display: grid;
+  grid-template-columns: 75% 25%;
+  text-align: center;
+}
+
+.time {
+  color: rgb(27, 179, 35);
+  font-size: 14em;
+  line-height: 0.6em;
+  font-family: lcd;
+  padding-top: 0.2em;
+  margin: 0;
+}
+
+.seconds {
+  font-family: lcd;
+  color: gray;
+  height: fit-content;
+  text-align: center;
+  position: relative;
+  top: 0;
+  font-size: 6em;
+  line-height: 0.9em;
+  /* justify-content: center; */
+  padding-top: 0.1em;
+}
+.amPm {
+  color: green;
+}
