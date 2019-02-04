@@ -13,6 +13,29 @@ class Clock extends Component {
       seconds: 0,
       ampm: "pm"
     };
+    this.days = [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday"
+    ];
+    this.months = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December"
+    ];
   }
   componentDidMount() {
     setInterval(() => {
@@ -33,8 +56,8 @@ class Clock extends Component {
       <div className="Clock">
         <div className="fullDate">
           <div>
-            <div className="day">{this.state.day}</div>
-            <div className="month">{this.state.month}</div>
+            <div className="day">{this.days[this.state.day]}</div>
+            <div className="month">{this.months[this.state.month]}</div>
           </div>
 
           <div className="date">{this.state.date}</div>
