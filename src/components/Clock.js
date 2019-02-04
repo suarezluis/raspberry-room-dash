@@ -3,7 +3,21 @@ import "./Clock.css";
 class Clock extends Component {
   constructor(props) {
     super(props);
-
+    this.getTime = () => {
+      let date = new Date();
+      let hours = date.getHours();
+      let minutes = date.getMinutes();
+      if (hours > 12) {
+        hours = hours - 12;
+      }
+      if (hours < 10) {
+        hours = `0${hours}`;
+      }
+      if (minutes < 10) {
+        minutes = `0${minutes}`;
+      }
+      return `${hours}:${minutes}`;
+    };
     this.state = {
       day: "",
       month: "",
@@ -11,7 +25,7 @@ class Clock extends Component {
       year: "",
       time: "",
       seconds: 0,
-      ampm: "pm"
+      ampm: ""
     };
     this.days = [
       "Sunday",
@@ -45,9 +59,10 @@ class Clock extends Component {
         month: date.getMonth(),
         date: date.getDate(),
         year: date.getFullYear(),
-        time: `${date.getHours()}:${date.getMinutes()}`,
-        seconds: date.getSeconds(),
-        ampm: "pm"
+        time: this.getTime(),
+        seconds:
+          date.getSeconds() < 10 ? `0${date.getSeconds()}` : date.getSeconds(),
+        ampm: date.getHours() < 12 ? "am" : "pm"
       });
     }, 1000);
   }
