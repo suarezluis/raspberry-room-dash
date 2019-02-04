@@ -14,7 +14,7 @@ class Clock extends Component {
       ampm: "pm"
     };
   }
-  render() {
+  componentDidMount() {
     setInterval(() => {
       let date = new Date();
       this.setState({
@@ -27,6 +27,8 @@ class Clock extends Component {
         ampm: "pm"
       });
     }, 1000);
+  }
+  render() {
     return (
       <div className="Clock">
         <div className="fullDate">
