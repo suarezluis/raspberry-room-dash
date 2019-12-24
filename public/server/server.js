@@ -16,7 +16,8 @@ app.get("/", async (req, res) => {
   });
   const page = await browser.newPage();
   await page.goto(
-    "https://www.google.com/maps/dir/8900+N+Interstate+Hwy+35+%231021,+Austin,+TX+78753,+USA/Colina+West,+8834+N+Capital+of+Texas+Hwy,+Austin,+TX+78759,+USA/@30.364868,-97.7617588,13z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x8644c97ec942a887:0x55d787b03b593eb6!2m2!1d-97.6923857!2d30.3535688!1m5!1m1!1s0x8644cb60294d3401:0x4c4e1b6a8331cb3d!2m2!1d-97.7609822!2d30.388997"
+    // "https://www.google.com/maps/dir/8900+N+Interstate+Hwy+35+%231021,+Austin,+TX+78753,+USA/Colina+West,+8834+N+Capital+of+Texas+Hwy,+Austin,+TX+78759,+USA/@30.364868,-97.7617588,13z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x8644c97ec942a887:0x55d787b03b593eb6!2m2!1d-97.6923857!2d30.3535688!1m5!1m1!1s0x8644cb60294d3401:0x4c4e1b6a8331cb3d!2m2!1d-97.7609822!2d30.388997"
+    "www.suarezluis.com"
   );
 
   const result = await page.evaluate(() => {
