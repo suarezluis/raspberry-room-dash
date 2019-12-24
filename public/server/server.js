@@ -15,7 +15,7 @@ app.get("/", async (req, res) => {
     executablePath: "chromium-browser"
   });
   const page = await browser.newPage();
-
+  await page.setJavaScriptEnabled(true);
   await page.setViewport({
     width: 1280,
     height: 800
@@ -27,7 +27,8 @@ app.get("/", async (req, res) => {
   );
 
   const result = await page.evaluate(() => {
-    let time = document.querySelector(".keynav-mode-off").innerHTML;
+    let time = document.querySelector(".section-directions-trip-duration")
+      .innerHTML;
     console.log(time);
     return {
       time
