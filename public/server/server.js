@@ -27,7 +27,7 @@ app.get("/", async (req, res) => {
   );
 
   const result = await page.evaluate(() => {
-    let time = document.querySelector(".keynav-mode-off").innerText;
+    let time = document.querySelector(".keynav-mode-off").innerHTML;
     console.log(time);
     return {
       time
