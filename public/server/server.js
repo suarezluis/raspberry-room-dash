@@ -21,7 +21,7 @@ app.get("/", async (req, res) => {
   );
 
   const result = await page.evaluate(() => {
-    let time = document.querySelector(".icons");
+    let time = document.querySelector("body");
     // .innerText;
     console.log(time);
     return {
