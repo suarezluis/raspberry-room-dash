@@ -20,8 +20,8 @@ app.get("/", async (req, res) => {
   );
 
   const result = await page.evaluate(() => {
-    let time = document.querySelector(".section-directions-trip-duration")
-      .innerText;
+    let time = document.querySelector(".section-directions-trip-duration");
+    // .innerText;
     console.log(time);
     return {
       time
