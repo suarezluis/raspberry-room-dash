@@ -4,7 +4,7 @@ import "./Weather.css";
 
 class Weather extends Component {
   state = {
-    from: "8900 N Interstate 35, Austin, TX 78753",
+    from: "8900 N Interstate 35, Austin TX, 78753",
     to: "8834 N Capital of Texas Hwy, Austin, TX",
     timeToWork: "Unknown"
   };
@@ -12,12 +12,10 @@ class Weather extends Component {
   getTimeToWork = () => {
     console.log("requesting time to work");
     axios
-      .get(
-        "http://from-to-api.herokuapp.com/?from=" +
-          this.state.from +
-          "&to=" +
-          this.state.to
-      )
+      .post("http://from-to-api.herokuapp.com/", {
+        from: this.state.from,
+        to: this.state.to
+      })
       .then(response => {
         console.log(response.data);
         this.setState({ timeToWork: response.data.time });
