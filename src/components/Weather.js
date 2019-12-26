@@ -17,7 +17,7 @@ class Weather extends Component {
     axios
       .post(
         // "http://from-to-api.herokuapp.com/"
-        "http://localhost:8080",
+        "http://192.168.1.235:8080",
         {
           from: this.state.from,
           to: this.state.to
