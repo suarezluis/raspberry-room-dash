@@ -29,7 +29,7 @@ class Weather extends Component {
     this.getTimeToWork();
     setInterval(() => {
       this.getTimeToWork();
-    }, 10 * 60 * 1000);
+    }, 15 * 60 * 1000);
   }
 
   render() {
